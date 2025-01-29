@@ -57,7 +57,9 @@ app.use(errorHandler)
 
 // Create default admin user
 createDefaultAdmin()
-
+app.get("/test", (req, res) => {
+  res.send("Server is running")
+})  
 // Start server
 const PORT = process.env.PORT || 5000
 httpServer.listen(PORT, () => {
